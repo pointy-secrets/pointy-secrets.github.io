@@ -1,0 +1,25 @@
+:root {
+  --font-body: "DM Mono", sans-serif;
+  --font-display: "DM Mono", sans-serif;
+  --font-mono: "DM Mono", sans-serif;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/uploads/KfVi9qNmN75UpTn_99sjg-DMMono-Regular.ttf") format("truetype");
+}
+:root {
+  --swatch-1: hsla(0, 0%, 0%, 0.85);
+  --swatch-2: hsla(0, 0%, 0%, 0.75);
+  --swatch-3: hsla(0, 0%, 0%, 0.6);
+  --swatch-4: hsla(0, 0%, 0%, 0.4);
+  --swatch-5: hsla(0, 0%, 0%, 0.25);
+  --hairline: hsla(0, 0%, 0%, 0.15);
+  --ink: hsla(0, 0%, 0%, 1);
+  --paper: hsla(0, 0%, 100%, 1);
+  --ink-2: hsla(0, 0%, 0%, 1);
+  --paper-2: hsla(0, 0%, 100%, 1);
+}
