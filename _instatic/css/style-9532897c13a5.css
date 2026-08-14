@@ -179,6 +179,10 @@ a:active {
 
 .caption-index {
   color: var(--swatch-4);
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
 }
 
 .caption-date {
@@ -486,22 +490,61 @@ img {
 
 .top-2 {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: space-around;
   padding: 12px 16px 1000px;
   border-bottom: 1px solid var(--ink-2);
-  position: relative;
   border-top-style: none;
   border-right-style: none;
   border-bottom-style: none;
   border-left-style: none;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  top: 400px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .top-2 {
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 375px) {
+  .top-2 {
+  justify-content: center;
+  gap: 1px;
+  }
 }
 
 .top-2 h1 {
   font-size: 12px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.08em;
   font-weight: 400;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  .top-2 h1 {
+  text-transform: none;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  justify-self: center;
+  align-self: flex-start;
+  position: relative;
+  }
+}
+
+@media (max-width: 375px) {
+  .top-2 h1 {
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  }
 }
 
 main {
@@ -517,13 +560,28 @@ main {
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
-  padding: 50px 0px 12px;
+  padding: 10px 0px 12px;
 }
 
 @media (max-width: 640px) {
   .group-head-2 {
   flex-direction: column;
   gap: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .group-head-2 {
+  position: relative;
+  }
+}
+
+@media (max-width: 375px) {
+  .group-head-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  justify-items: baseline;
   }
 }
 
@@ -550,20 +608,35 @@ main {
   }
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+@media (max-width: 375px) {
+  .desc-2 {
+  position: absolute;
+  right: 20px;
+  }
 }
 
 .group-body-2 {
-  max-width: 60rem;
-  padding: 50px 0px;
-  font-size: 13px;
+  padding: 50px 10px 50px 0px;
+  font-size: 12px;
   line-height: 1.4;
+  display: grid;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .group-body-2 {
+  display: flex;
+  justify-content: flex-start;
+  }
 }
 
 .cols-2-2 {
   grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
 
 @media (max-width: 640px) {
@@ -573,12 +646,21 @@ main {
 }
 
 .cols-3-2 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  overflow-x: scroll;
+  overflow: auto;
 }
 
 @media (max-width: 640px) {
   .cols-3-2 {
   grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cols-3-2 {
+  display: grid;
   }
 }
 
@@ -588,6 +670,7 @@ main {
   grid-template-columns: repeat(1, 1fr);
   gap: 3px;
   grid-template-rows: repeat(2, 1fr);
+  padding-top: 2px;
 }
 
 .strip-2 img {
@@ -615,22 +698,46 @@ main {
   justify-content: flex-start;
 }
 
-.grid-carousel {
-  display: flex;
-  background-color: #000000;
-  grid-template-columns: repeat(2, 1fr);
-  flex-wrap: wrap;
-}
-
 .longad {
   max-height: 30px;
 }
 
 .textgrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4;
-  overflow: scroll;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
   justify-items: flex-start;
-  align-items: baseline;
+  justify-content: flex-start;
+  position: relative;
+  gap: 10px;
+  box-sizing: content-box;
+}
+
+.headertinyhero {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .headertinyhero {
+  font-family: inherit;
+  position: relative;
+  }
+}
+
+.mag {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.dektopbody {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: flex-start;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 375px) {
+  .dektopbody {
+  display: flex;
+  }
 }
